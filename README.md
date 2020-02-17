@@ -1,6 +1,6 @@
 # C++ template
 
-This repository is a fork of awesome C++ project template [TimothyHelton/cpp_project_template](https://github.com/TimothyHelton/cpp_project_template).
+This repository is a fork of awesome C++ project template: [TimothyHelton/cpp_project_template](https://github.com/TimothyHelton/cpp_project_template) ([Medium](https://medium.com/@TimothyHelton/c-projects-with-cmake-google-test-and-doxygen-using-clion-d508f6f4ad05)).
 
 ## How to use
 
