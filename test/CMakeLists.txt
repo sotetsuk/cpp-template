@@ -1,7 +1,6 @@
 include(${CMAKEDIR}/BuildGoogleTest.cmake)
 
 file(GLOB TEST_FILES *.cpp)
-add_executable(example ${TEST_FILES})
-target_link_libraries(example ${CMAKE_PROJECT_NAME})
-target_link_libraries(example gtest gmock_main)
-add_test(NAME example_test COMMAND example)
+add_executable(${CMAKE_PROJECT_NAME}_test ${TEST_FILES})
+target_link_libraries(${CMAKE_PROJECT_NAME}_test ${CMAKE_PROJECT_NAME})
+target_link_libraries(${CMAKE_PROJECT_NAME}_test gtest gmock_main)
