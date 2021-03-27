@@ -1,7 +1,4 @@
-cmake_minimum_required(VERSION 3.3)
-
 include(${CMAKEDIR}/BuildGoogleTest.cmake)
-
 
 file(GLOB TEST_FILES *.cpp)
 add_executable(example ${TEST_FILES})
