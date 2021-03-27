@@ -1,8 +1,8 @@
-build:
+build: MyCppLibrary
 	mkdir -p build && cd build && cmake .. && make -j
 
-test: build
-	./build/tests/
+test: build tests
+	./build/tests/MyCppProject_test
 
 clean:
 	rm -rf build
