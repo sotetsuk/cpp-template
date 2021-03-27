@@ -10,7 +10,7 @@ add_executable(${CMAKE_PROJECT_NAME}_exe ${SOURCE_FILES})
 include_directories(MyCppLibrary)
 
 add_subdirectory(MyCppLibrary)
-add_subdirectory(test)
+add_subdirectory(tests)
 
 target_link_libraries(${CMAKE_PROJECT_NAME}_exe ${CMAKE_PROJECT_NAME})
 
