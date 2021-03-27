@@ -1,4 +1,4 @@
-include(${CMAKEDIR}/BuildGoogleTest.cmake)
+include(${CMAKEDIR}/googletest.cmake)
 
 file(GLOB TEST_FILES *.cpp)
 add_executable(${CMAKE_PROJECT_NAME}_test ${TEST_FILES})
