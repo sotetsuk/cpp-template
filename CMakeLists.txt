@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.9)
 project(MyCppProject)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKEDIR ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 set(SOURCE_FILES main.cpp)
 add_executable(${CMAKE_PROJECT_NAME}_exe ${SOURCE_FILES})
