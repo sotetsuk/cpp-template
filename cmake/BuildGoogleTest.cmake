@@ -1,9 +1,13 @@
 include(CTest)
 include(${CMAKEDIR}/DownloadProject/DownloadProject.cmake)
 
-download_project(PROJ                googletest
+set(DOWNLOAD_PROJ_NAME googletest)
+download_project(PROJ                ${DOWNLOAD_PROJ_NAME}
                  GIT_REPOSITORY      https://github.com/google/googletest.git
                  GIT_TAG             master
+                 DOWNLOAD_DIR        ${EXTERNALDIR}/${DOWNLOAD_PROJ_NAME}-download
+                 SOURCE_DIR          ${EXTERNALDIR}/${DOWNLOAD_PROJ_NAME}-src
+                 BINARY_DIR          ${EXTERNALDIR}/${DOWNLOAD_PROJ_NAME}-build
                  UPDATE_DISCONNECTED 1
 )
 
