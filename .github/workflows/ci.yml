@@ -14,7 +14,6 @@ jobs:
         with:
           path: |
             external
-            !~/cache/exclude
           key: ${{ runner.os }}-external
 
       - name: Build
