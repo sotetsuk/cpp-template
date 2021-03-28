@@ -1,5 +1,3 @@
 #include "example.h"
 
-int MyCppLibrary::f() {
-    return 0;
-}
+int MyCppLibrary::f() { return 0; }
