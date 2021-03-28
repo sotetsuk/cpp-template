@@ -12,7 +12,6 @@ include_directories(MyCppLibrary)
 
 add_subdirectory(MyCppLibrary)
 add_subdirectory(tests)
-add_subdirectory(helloworld)
 
 target_link_libraries(${CMAKE_PROJECT_NAME}_exe ${CMAKE_PROJECT_NAME})
 
