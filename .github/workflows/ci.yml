@@ -9,6 +9,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Cache external
+        uses: actions/cache@v2
+        with:
+          path: |
+            external
+            !~/cache/exclude
+          key: ${{ runner.os }}-external
+
       - name: Build
         run: make build
 
