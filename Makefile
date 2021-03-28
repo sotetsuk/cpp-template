@@ -1,5 +1,5 @@
 build: MyCppLibrary
-	mkdir -p build && cd build && cmake .. && make -j
+	mkdir -p build && cd build && cmake .. && make -j 1
 
 test: build tests
 	./build/tests/MyCppProject_test
