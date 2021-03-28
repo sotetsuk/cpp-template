@@ -14,7 +14,7 @@ jobs:
         with:
           path: |
             external
-          key: ${{ runner.os }}-external
+          key: external
 
       - name: Build
         run: make build
