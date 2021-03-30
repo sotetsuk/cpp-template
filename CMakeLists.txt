@@ -6,12 +6,12 @@ set(CMAKEDIR ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 set(EXTERNALDIR ${CMAKE_CURRENT_SOURCE_DIR}/external)
 
 set(SOURCE_FILES main.cpp)
-add_executable(${CMAKE_PROJECT_NAME}_exe ${SOURCE_FILES})
+add_executable(${CMAKE_PROJECT_NAME}.out ${SOURCE_FILES})
 
 
 include_directories(include)
 add_subdirectory(include/MyCppLibrary)
 add_subdirectory(tests)
 
-target_link_libraries(${CMAKE_PROJECT_NAME}_exe ${CMAKE_PROJECT_NAME})
+target_link_libraries(${CMAKE_PROJECT_NAME}.out ${CMAKE_PROJECT_NAME})
 
