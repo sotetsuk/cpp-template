@@ -1,7 +1,7 @@
-#include "MyCppLibrary/hello.hpp"
+#include "MyCppLibrary/example.h"
 #include <iostream>
 
 int main() {
-  std::cout << "hello world: " << hello::hi() << std::endl;
+  std::cout << "hello world: " << MyCppLibrary::f() << std::endl;
   return 0;
 }
