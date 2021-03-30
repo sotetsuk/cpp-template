@@ -4,8 +4,9 @@ project(${CMAKE_PROJECT_NAME})
 # Static library example
 ##############################################################################
 
-add_library(${CMAKE_PROJECT_NAME} STATIC
-        hello.hpp
+add_library(${CMAKE_PROJECT_NAME} STATIC 
+    example.cpp
+    example.h
 )
 
 ##############################################################################
