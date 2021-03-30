@@ -1,4 +1,4 @@
-build: MyCppLibrary
+build: include/MyCppLibrary
 	mkdir -p build && cd build && cmake .. && $(MAKE)
 
 test: build tests
