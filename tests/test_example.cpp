@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
-#include "MyCppLibrary/example.h"
+#include "MyCppLibrary/hello.hpp"
 
 TEST(Example, Equals) {
-  EXPECT_EQ(0, MyCppLibrary::f());
+  EXPECT_EQ(1, hello::hi());
 }
