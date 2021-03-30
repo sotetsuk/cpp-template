@@ -30,11 +30,18 @@ FetchContent_Declare(
   GIT_TAG        v1.36.4
 )
 
-FetchContent_MakeAvailable(grpc)
+set(CMAKE_BUILD_TYPE Release)  # required to compile libprotobuf.a
+# FetchContent_MakeAvailable(grpc)
+FetchContent_GetProperties(grpc)
+if(NOT grpc_POPULATED)
+    FetchContent_Populate(grpc)
+endif()
+include_directories(${grpc_SOURCE_DIR}/include
+        ${grpc_SOURCE_DIR}/third_party/protobuf/src)
 
-set(_PROTOBUF_LIBPROTOBUF libprotobuf)
-set(_REFLECTION grpc++_reflection)
-set(_PROTOBUF_PROTOC $<TARGET_FILE:protoc>)
-set(_GRPC_GRPCPP grpc++)
-set(_GRPC_CPP_PLUGIN_EXECUTABLE $<TARGET_FILE:grpc_cpp_plugin>)
+set(_PROTOBUF_LIBPROTOBUF ${grpc_BINARY_DIR}/third_party/protobuf/libprotobuf.a)
+set(_REFLECTION ${grpc_BINARY_DIR}/libgrpc++_reflection.a)
+set(_PROTOBUF_PROTOC ${grpc_BINARY_DIR}/third_party/protobuf/protoc)
+set(_GRPC_GRPCPP ${grpc_BINARY_DIR}/libgrpc++.a)
+set(_GRPC_CPP_PLUGIN_EXECUTABLE ${grpc_BINARY_DIR}/grpc_cpp_plugin)
 
