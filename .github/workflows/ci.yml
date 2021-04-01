@@ -16,12 +16,12 @@ jobs:
             external
           key: external-${{ hashFiles('cmake/*') }}
 
-      - name: Cache Library for Tests
+      - name: Cache tests/external
         uses: actions/cache@v2
         with:
           path: |
-            tests/lib
-          key: tests_lib-${{ hashFiles('tests/CMakeLists.txt') }}
+            tests/external
+          key: tests_external-${{ hashFiles('tests/CMakeLists.txt') }}
 
       - name: Build
         run: make build -j 4

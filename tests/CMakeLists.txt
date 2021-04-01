@@ -1,5 +1,5 @@
 include(FetchContent)
-set(FETCHCONTENT_BASE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib)
+set(FETCHCONTENT_BASE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external)
 set(FETCHCONTENT_UPDATES_DISCONNECTED ON)
 FetchContent_Declare(
   googletest
