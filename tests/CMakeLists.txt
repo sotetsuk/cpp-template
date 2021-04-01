@@ -9,6 +9,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 
 file(GLOB TEST_FILES *.cpp)
-add_executable(${CMAKE_PROJECT_NAME}_test ${TEST_FILES})
-target_link_libraries(${CMAKE_PROJECT_NAME}_test ${CMAKE_PROJECT_NAME})
-target_link_libraries(${CMAKE_PROJECT_NAME}_test gtest gmock_main)
+add_executable(MyLib_test ${TEST_FILES})
+target_include_directories(MyLib_test ../include)
+target_link_libraries(MyLib_test MyLib)
+target_link_libraries(MyLib_test gtest gmock_main)

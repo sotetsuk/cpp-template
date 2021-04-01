@@ -1,10 +1,10 @@
-project(${CMAKE_PROJECT_NAME})
+project(MyLib)
 
 ##############################################################################
 # Static library example
 ##############################################################################
 
-add_library(${CMAKE_PROJECT_NAME} STATIC 
+add_library(MyLib STATIC 
     example.cpp
     example.h
 )
