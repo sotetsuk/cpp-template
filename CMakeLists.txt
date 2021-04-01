@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.11)
 project(MyCppProject)
 
+
+option(MYLIB_BUILD_TESTS "Builds test executable file." ON)
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKEDIR ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 set(EXTERNALDIR ${CMAKE_CURRENT_SOURCE_DIR}/external)
@@ -11,7 +14,10 @@ add_executable(${CMAKE_PROJECT_NAME}.out ${SOURCE_FILES})
 
 include_directories(include)
 add_subdirectory(include/MyCppLibrary)
-add_subdirectory(tests)
+
+if(MYLIB_BUILD_TESTS)
+    add_subdirectory(tests)
+endif()
 
 target_link_libraries(${CMAKE_PROJECT_NAME}.out ${CMAKE_PROJECT_NAME})
 
