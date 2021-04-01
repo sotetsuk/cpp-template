@@ -9,7 +9,5 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 
 file(GLOB TEST_FILES *.cpp)
-add_executable(MyLib_test ${TEST_FILES})
-target_include_directories(MyLib_test PRIVATE ../include)
-target_link_libraries(MyLib_test MyLib)
+add_executable(MyLib_test MyLib ${TEST_FILES})
 target_link_libraries(MyLib_test gtest gmock_main)
