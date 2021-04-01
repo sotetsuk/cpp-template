@@ -2,7 +2,7 @@ build: include/MyCppLibrary
 	mkdir -p build && cd build && cmake .. && $(MAKE)
 
 test: build tests
-	./build/tests/MyCppProject_test
+	./build/tests/MyLib_test
 
 clean:
 	rm -rf build
